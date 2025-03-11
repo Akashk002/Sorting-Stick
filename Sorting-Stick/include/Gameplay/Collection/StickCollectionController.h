@@ -50,9 +50,11 @@ namespace Gameplay
             bool isCollectionSorted();
             void destroy();
 
+            void setCompletedColor();
+
             void processBubbleSort();
             void processInsertionSort();
-            void setCompletedColor();
+            void processSelectionSort();
 
         public:
             StickCollectionController();
