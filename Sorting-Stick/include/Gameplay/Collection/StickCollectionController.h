@@ -28,11 +28,10 @@ namespace Gameplay
             int number_of_comparisons;
             int number_of_array_access;
             int current_operation_delay;
+            int color_delay;
 
             int delay_in_ms;
             sf::String time_complexity;
-
-            int color_delay;
 
             void initializeSticks();
             float calculateStickWidth();
@@ -45,16 +44,26 @@ namespace Gameplay
             void resetSticksColor();
             void resetVariables();
 
+            void merge(int left, int mid, int right);
+            void mergeSort(int left, int right);
+
             void processSortThreadState();
-
-            bool isCollectionSorted();
-            void destroy();
-
-            void setCompletedColor();
 
             void processBubbleSort();
             void processInsertionSort();
             void processSelectionSort();
+            void processMergeSort();
+
+            void inPlaceMerge(int left, int mid, int right);
+
+            void inPlaceMergeSort(int left, int right);
+
+            void processInPlaceMergeSort();
+
+            void setCompletedColor();
+
+            bool isCollectionSorted();
+            void destroy();
 
         public:
             StickCollectionController();
